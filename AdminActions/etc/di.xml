@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ayko\AdminActions\Api\AdminActionRepositoryInterface" type="Ayko\AdminActions\Model\AdminActionRepository" />
+    <preference for="Ayko\AdminActions\Api\Data\AdminActionInterface" type="Ayko\AdminActions\Model\AdminAction" />
+    <preference for="Ayko\AdminActions\Api\Data\AdminActionSearchResultInterface" type="Ayko\AdminActions\Model\AdminActionSearchResult" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ayko_adminaction_data_source" xsi:type="string">Ayko\AdminActions\Model\ResourceModel\AdminAction\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Ayko\AdminActions\Model\ResourceModel\AdminAction\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">ayko_adminactions</argument>
+            <argument name="resourceModel" xsi:type="string">Ayko\AdminActions\Model\ResourceModel\AdminAction</argument>
+        </arguments>
+    </virtualType>
+</config>

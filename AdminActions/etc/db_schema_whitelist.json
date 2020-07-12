@@ -1,0 +1,18 @@
+{
+    "ayko_adminactions": {
+        "column": {
+            "id": true,
+            "datetime": true,
+            "action": true,
+            "entity": true,
+            "full_action_name": true,
+            "username": true,
+            "ip_address": true,
+            "request_data": true,
+            "post_data": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="ayko_adminactions" resource="default" engine="innodb" comment="Ayko Admin Actions">
+        <column xsi:type="int" name="id" padding="11" unsigned="true" nullable="true" identity="true" comment="Admin Actions ID"/>
+        <column xsi:type="datetime" name="datetime" on_update="false" nullable="true" comment="Created Time"/>
+        <column xsi:type="varchar" name="action" length="10" nullable="true" default="" comment="Action"/>
+        <column xsi:type="varchar" name="entity" length="255" nullable="false" default="" comment="Entity"/>
+        <column xsi:type="varchar" name="full_action_name" length="255" nullable="false" default="" comment="Full Action Name"/>
+        <column xsi:type="varchar" name="username" length="255" nullable="false" default="" comment="Username"/>
+        <column xsi:type="varchar" name="ip_address" length="255" nullable="false" default="" comment="Ip Address"/>
+        <column xsi:type="text" name="request_data" nullable="false" comment="Request Data"/>
+        <column xsi:type="text" name="post_data" nullable="true" comment="Post Data"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

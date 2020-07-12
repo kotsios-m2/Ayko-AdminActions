@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ayko_AdminActions::ayko_logs"
+             title="Logs"
+             translate="title"
+             module="Ayko_AdminActions"
+             sortOrder="10"
+             parent="Magento_Backend::system"
+             dependsOnModule="Ayko_AdminActions"
+             resource="Ayko_AdminActions::ayko_logs"/>
+        <add id="Ayko_AdminActions::ayko_adminactions"
+             title="Admin Actions"
+             translate="title"
+             module="Ayko_AdminActions"
+             sortOrder="20"
+             parent="Ayko_AdminActions::ayko_logs"
+             action="ayko_adminaction/index/index"
+             resource="Ayko_AdminActions::ayko_adminactions"/>
+    </menu>
+</config>
