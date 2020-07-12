@@ -91,18 +91,14 @@ class AfterSaveObserver implements ObserverInterface
     {
         $object = $observer->getEvent()->getObject();
 
-        \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\Logger\Monolog')->crit(__CLASS__.' -- '.__FUNCTION__.' -- '.__LINE__);
-
-        // Store data only if is post request and not related to mui bookmark
         if ($this->_request->getPostValue() && !empty($this->_request->getPostValue())) {
 
             $entity = $this->_dataProcessorHelper->getEntity($this->_request);
             if ($this->_dataProcessorHelper->isInEntitiesToTrack($this->_request, $entity)) {
-                \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\Logger\Monolog')->crit(__CLASS__.' -- '.__FUNCTION__.' -- '.__LINE__);
                 $adminActionRow = [
                     AdminActionInterface::ADMIN_ACTION_DATETIME => $this->_dateTime->gmtDate(),
                     AdminActionInterface::ADMIN_ACTION_ACTION => self::ACTION_SAVE,
-                    AdminActionInterface::ADMIN_ACTION_ENTITY => $this->_dataProcessorHelper->getEntity($this->_request),
+                    AdminActionInterface::ADMIN_ACTION_ENTITY => ucfirst($this->_dataProcessorHelper->getEntity($this->_request)),
                     AdminActionInterface::ADMIN_ACTION_FULL_ACTION_NAME => $this->_request->getFullActionName(),
                     AdminActionInterface::ADMIN_ACTION_USERNAME => $this->_authSession->getUser()->getUsername(),
                     AdminActionInterface::ADMIN_ACTION_IP_ADDRESS => $this->_remoteAddress->getRemoteAddress(),
@@ -115,10 +111,7 @@ class AfterSaveObserver implements ObserverInterface
                 $adminAction = $this->_adminActionFactory->create();
                 $adminAction->addData($adminActionRow);
                 $this->_adminActionRepository->save($adminAction);
-                \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\Logger\Monolog')->crit(__CLASS__.' -- '.__FUNCTION__.' -- '.__LINE__);
             }
-        } else {
-            \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\Logger\Monolog')->crit(__CLASS__.' -- '.__FUNCTION__.' -- '.__LINE__);
         }
     }
 }

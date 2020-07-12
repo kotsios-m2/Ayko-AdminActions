@@ -90,27 +90,27 @@ class LayoutPLugin
      */
     public function beforeRenderResult(Layout $subject, ResponseInterface $httpResponse)
     {
-            $entity = $this->_dataProcessorHelper->getEntity($this->_request);
+        $entity = $this->_dataProcessorHelper->getEntity($this->_request);
 
-            if (!$this->_request->getPostValue() &&
-                $this->_dataProcessorHelper->isInEntitiesToTrack($this->_request, $entity)) {
-                $adminActionRow = [
-                    AdminActionInterface::ADMIN_ACTION_DATETIME => $this->_dateTime->gmtDate(),
-                    AdminActionInterface::ADMIN_ACTION_ACTION => ucfirst($this->_request->getActionName()),
-                    AdminActionInterface::ADMIN_ACTION_ENTITY => ucfirst($this->_dataProcessorHelper->getEntity($this->_request)),
-                    AdminActionInterface::ADMIN_ACTION_FULL_ACTION_NAME => $this->_request->getFullActionName(),
-                    AdminActionInterface::ADMIN_ACTION_USERNAME => $this->_authSession->getUser()->getUsername(),
-                    AdminActionInterface::ADMIN_ACTION_IP_ADDRESS => $this->_remoteAddress->getRemoteAddress(),
-                    AdminActionInterface::ADMIN_ACTION_REQUEST_DATA =>
-                        $this->_dataProcessorHelper->getRequestData($this->_request, $entity),
-                    AdminActionInterface::ADMIN_ACTION_POST_DATA => null
-                ];
+        if (!($this->_request->getPostValue()) &&
+            $this->_dataProcessorHelper->isInEntitiesToTrack($this->_request, $entity)) {
 
-                $adminAction = $this->_adminActionFactory->create();
-                $adminAction->addData($adminActionRow);
-                $this->_adminActionRepository->save($adminAction);
-            }
+            $adminActionRow = [
+                AdminActionInterface::ADMIN_ACTION_DATETIME => $this->_dateTime->gmtDate(),
+                AdminActionInterface::ADMIN_ACTION_ACTION => ucfirst($this->_request->getActionName()),
+                AdminActionInterface::ADMIN_ACTION_ENTITY => ucfirst($this->_dataProcessorHelper->getEntity($this->_request)),
+                AdminActionInterface::ADMIN_ACTION_FULL_ACTION_NAME => $this->_request->getFullActionName(),
+                AdminActionInterface::ADMIN_ACTION_USERNAME => $this->_authSession->getUser()->getUsername(),
+                AdminActionInterface::ADMIN_ACTION_IP_ADDRESS => $this->_remoteAddress->getRemoteAddress(),
+                AdminActionInterface::ADMIN_ACTION_REQUEST_DATA =>
+                    $this->_dataProcessorHelper->getRequestData($this->_request, $entity),
+                AdminActionInterface::ADMIN_ACTION_POST_DATA => null
+            ];
 
+            $adminAction = $this->_adminActionFactory->create();
+            $adminAction->addData($adminActionRow);
+            $this->_adminActionRepository->save($adminAction);
+        }
         return [$httpResponse];
     }
 }
