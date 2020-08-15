@@ -1,45 +1,45 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="catalog_category_save_after">
-        <observer name="ayko_adminactions_catalog_category_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_catalog_category_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="catalog_category_delete_after">
-        <observer name="ayko_adminactions_catalog_category_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_catalog_category_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
     <event name="catalog_product_save_after">
-        <observer name="ayko_adminactions_catalog_product_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_catalog_product_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="catalog_product_delete_after">
-        <observer name="ayko_adminactions_catalog_product_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_catalog_product_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
     <event name="customer_save_after">
-        <observer name="ayko_adminactions_customer_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_customer_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="customer_delete_after">
-        <observer name="ayko_adminactions_customer_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_customer_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
     <event name="sales_order_save_after">
-        <observer name="ayko_adminactions_sales_order_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_sales_order_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="sales_order_delete_after">
-        <observer name="ayko_adminactions_sales_order_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_sales_order_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
     <event name="sales_invoice_save_after">
-        <observer name="ayko_adminactions_sales_invoice_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_sales_invoice_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="sales_invoice_delete_after">
-        <observer name="ayko_adminactions_sales_invoice_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_sales_invoice_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
     <event name="sales_shipment_save_after">
-        <observer name="ayko_adminactions_sales_shipment_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_sales_shipment_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="sales_shipment_delete_after">
-        <observer name="ayko_adminactions_sales_shipment_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_sales_shipment_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
     <event name="sales_creditmemo_save_after">
-        <observer name="ayko_adminactions_sales_creditmemo_save_after" instance="Ayko\AdminActions\Observer\AfterSaveObserver" />
+        <observer name="kotsios_adminactions_sales_creditmemo_save_after" instance="Kotsios\AdminActions\Observer\AfterSaveObserver" />
     </event>
     <event name="sales_creditmemo_delete_after">
-        <observer name="ayko_adminactions_sales_creditmemo_delete_after" instance="Ayko\AdminActions\Observer\AfterDeleteObserver" />
+        <observer name="kotsios_adminactions_sales_creditmemo_delete_after" instance="Kotsios\AdminActions\Observer\AfterDeleteObserver" />
     </event>
 </config>

@@ -1,5 +1,5 @@
 {
-    "ayko_adminactions": {
+    "kotsios_adminactions": {
         "column": {
             "id": true,
             "datetime": true,

@@ -1,12 +1,12 @@
 <?php
 
-namespace Ayko\AdminActions\Block\Adminhtml\AdminAction\View;
+namespace Kotsios\AdminActions\Block\Adminhtml\AdminAction\View;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 /**
  * Class BackButton
- * @package Ayko\AdminActions\Block\Adminhtml\AdminAction\View
+ * @package Kotsios\AdminActions\Block\Adminhtml\AdminAction\View
  */
 class BackButton extends GenericButton implements ButtonProviderInterface
 {
@@ -30,6 +30,6 @@ class BackButton extends GenericButton implements ButtonProviderInterface
      */
     public function getBackUrl()
     {
-        return $this->getUrl('ayko/adminactions/index');
+        return $this->getUrl('kotsios/adminactions/index');
     }
 }

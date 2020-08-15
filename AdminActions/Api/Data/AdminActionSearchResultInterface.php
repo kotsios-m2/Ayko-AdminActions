@@ -1,12 +1,12 @@
 <?php
 
-namespace Ayko\AdminActions\Api\Data;
+namespace Kotsios\AdminActions\Api\Data;
 
 use Magento\Framework\Api\Search\SearchResultInterface;
 
 /**
  * Interface AdminActionSearchResultInterface
- * @package Ayko\AdminActions\Api\Data
+ * @package Kotsios\AdminActions\Api\Data
  */
 interface AdminActionSearchResultInterface extends SearchResultInterface
 {

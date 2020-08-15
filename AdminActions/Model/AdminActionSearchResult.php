@@ -1,13 +1,13 @@
 <?php
 
-namespace Ayko\AdminActions\Model;
+namespace Kotsios\AdminActions\Model;
 
 use Magento\Framework\Api\Search\SearchResult;
-use Ayko\AdminActions\Api\Data\AdminActionSearchResultInterface;
+use Kotsios\AdminActions\Api\Data\AdminActionSearchResultInterface;
 
 /**
  * Class AdminActionSearchResult
- * @package Ayko\AdminActions\Model
+ * @package Kotsios\AdminActions\Model
  */
 class AdminActionSearchResult extends SearchResult implements AdminActionSearchResultInterface
 {

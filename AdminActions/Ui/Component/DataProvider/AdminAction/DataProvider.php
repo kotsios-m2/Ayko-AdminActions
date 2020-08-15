@@ -1,9 +1,9 @@
 <?php
 
-namespace Ayko\AdminActions\Ui\Component\DataProvider\AdminAction;
+namespace Kotsios\AdminActions\Ui\Component\DataProvider\AdminAction;
 
-use Ayko\AdminActions\Api\Data\AdminActionInterface;
-use Ayko\AdminActions\Model\ResourceModel\AdminAction\Grid\CollectionFactory;
+use Kotsios\AdminActions\Api\Data\AdminActionInterface;
+use Kotsios\AdminActions\Model\ResourceModel\AdminAction\Grid\CollectionFactory;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 
 class DataProvider extends AbstractDataProvider

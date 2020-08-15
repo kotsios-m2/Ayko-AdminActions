@@ -1,8 +1,8 @@
 <?php
 
-namespace Ayko\AdminActions\Model\ResourceModel\AdminAction\Grid;
+namespace Kotsios\AdminActions\Model\ResourceModel\AdminAction\Grid;
 
-use Ayko\AdminActions\Api\Data\AdminActionSearchResultInterface;
+use Kotsios\AdminActions\Api\Data\AdminActionSearchResultInterface;
 use Magento\Framework\Api\Search\SearchResultInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface;
@@ -15,7 +15,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Class Collection
- * @package Ayko\AdminActions\Model\ResourceModel\AdminAction\Grid
+ * @package Kotsios\AdminActions\Model\ResourceModel\AdminAction\Grid
  */
 class Collection extends AbstractCollection implements AdminActionSearchResultInterface
 {
@@ -60,7 +60,7 @@ class Collection extends AbstractCollection implements AdminActionSearchResultIn
      */
     protected function _construct()
     {
-        $this->_init('Ayko\AdminActions\Model\AdminAction', 'Ayko\AdminActions\Model\ResourceModel\AdminAction');
+        $this->_init('Kotsios\AdminActions\Model\AdminAction', 'Kotsios\AdminActions\Model\ResourceModel\AdminAction');
     }
 
     /**
@@ -72,7 +72,7 @@ class Collection extends AbstractCollection implements AdminActionSearchResultIn
 
         $tableDescription = $this->getConnection()->describeTable($this->getMainTable());
         foreach ($tableDescription as $columnInfo) {
-            $this->addFilterToMap($columnInfo['COLUMN_NAME'], 'ayko_adminactions.' . $columnInfo['COLUMN_NAME']);
+            $this->addFilterToMap($columnInfo['COLUMN_NAME'], 'kotsios_adminactions.' . $columnInfo['COLUMN_NAME']);
         }
 
         return $this;

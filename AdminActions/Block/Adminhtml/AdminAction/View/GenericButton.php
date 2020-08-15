@@ -1,10 +1,10 @@
 <?php
 
-namespace Ayko\AdminActions\Block\Adminhtml\AdminAction\View;
+namespace Kotsios\AdminActions\Block\Adminhtml\AdminAction\View;
 
 /**
  * Class GenericButton
- * @package Ayko\AdminActions\Block\Adminhtml\AdminAction\View
+ * @package Kotsios\AdminActions\Block\Adminhtml\AdminAction\View
  */
 class GenericButton
 {

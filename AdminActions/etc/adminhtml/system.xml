@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="ayko" translate="label" sortOrder="99999">
-            <label>Ayko</label>
+        <tab id="kotsios" translate="label" sortOrder="99999">
+            <label>Kotsios</label>
         </tab>
-        <section id="ayko" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="kotsios" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Ayko</label>
-            <tab>ayko</tab>
-            <resource>Ayko_AdminActions::ayko_adminactions</resource>
+            <label>Kotsios</label>
+            <tab>kotsios</tab>
+            <resource>Kotsios_AdminActions::kotsios_adminactions</resource>
             <group id="cron" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Cron Configuration</label>
                 <field id="delete_older_than" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">

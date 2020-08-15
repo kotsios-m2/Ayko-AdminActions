@@ -1,6 +1,6 @@
 <?php
 
-namespace Ayko\AdminActions\Controller\Adminhtml\Index;
+namespace Kotsios\AdminActions\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -10,11 +10,11 @@ use Magento\Framework\View\Result\PageFactory;
 
 /**
  * Class Index
- * @package Ayko\AdminActions\Controller\Adminhtml\AdminAction
+ * @package Kotsios\AdminActions\Controller\Adminhtml\AdminAction
  */
 class Index extends Action implements HttpGetActionInterface
 {
-    const MENU_ID = 'Ayko_AdminActions::ayko_adminactions';
+    const MENU_ID = 'Kotsios_AdminActions::kotsios_adminactions';
 
     /**
      * @var PageFactory

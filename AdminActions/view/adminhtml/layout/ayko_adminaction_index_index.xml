@@ -7,6 +7,6 @@
         </action>
     </referenceBlock>
     <referenceContainer name="content">
-        <uiComponent name="ayko_admin_action_grid"/>
+        <uiComponent name="kotsios_admin_action_grid"/>
     </referenceContainer>
 </page>

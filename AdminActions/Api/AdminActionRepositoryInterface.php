@@ -1,10 +1,10 @@
 <?php
 
-namespace Ayko\AdminActions\Api;
+namespace Kotsios\AdminActions\Api;
 
 /**
  * Interface AdminActionRepositoryInterface
- * @package Ayko\AdminActions\Api
+ * @package Kotsios\AdminActions\Api
  */
 interface AdminActionRepositoryInterface
 {

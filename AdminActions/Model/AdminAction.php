@@ -1,24 +1,24 @@
 <?php
 
-namespace Ayko\AdminActions\Model;
+namespace Kotsios\AdminActions\Model;
 
-use Ayko\AdminActions\Api\Data\AdminActionInterface;
+use Kotsios\AdminActions\Api\Data\AdminActionInterface;
 use Magento\Framework\Model\AbstractModel;
 
 /**
  * Class AdminAction
- * @package Ayko\AdminActions\Model
+ * @package Kotsios\AdminActions\Model
  */
 class AdminAction extends AbstractModel implements AdminActionInterface
 {
-    protected $_eventPrefix = 'ayko_adminactions';
+    protected $_eventPrefix = 'kotsios_adminactions';
 
     /**
      * @inheritdoc
      */
     protected function _construct()
     {
-        $this->_init('Ayko\AdminActions\Model\ResourceModel\AdminAction');
+        $this->_init('Kotsios\AdminActions\Model\ResourceModel\AdminAction');
     }
 
     /**

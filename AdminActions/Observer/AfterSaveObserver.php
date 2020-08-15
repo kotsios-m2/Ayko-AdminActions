@@ -1,11 +1,11 @@
 <?php
 
-namespace Ayko\AdminActions\Observer;
+namespace Kotsios\AdminActions\Observer;
 
-use Ayko\AdminActions\Api\Data\AdminActionInterface;
-use Ayko\AdminActions\Api\AdminActionRepositoryInterface;
-use Ayko\AdminActions\Helper\DataProcessor as DataProcessorHelper;
-use Ayko\AdminActions\Model\AdminActionFactory;
+use Kotsios\AdminActions\Api\Data\AdminActionInterface;
+use Kotsios\AdminActions\Api\AdminActionRepositoryInterface;
+use Kotsios\AdminActions\Helper\DataProcessor as DataProcessorHelper;
+use Kotsios\AdminActions\Model\AdminActionFactory;
 use Magento\Backend\Model\Auth\Session as AuthSession;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\Event\ObserverInterface;
@@ -14,7 +14,7 @@ use Magento\Framework\HTTP\PhpEnvironment\RemoteAddress;
 
 /**
  * Class AfterSaveObserver
- * @package Ayko\AdminActions\Observer
+ * @package Kotsios\AdminActions\Observer
  */
 class AfterSaveObserver implements ObserverInterface
 {

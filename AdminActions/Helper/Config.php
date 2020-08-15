@@ -1,13 +1,13 @@
 <?php
 
-namespace Ayko\AdminActions\Helper;
+namespace Kotsios\AdminActions\Helper;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
 
 /**
  * Class Config
- * @package Ayko\AdminActions\Helper
+ * @package Kotsios\AdminActions\Helper
  */
 class Config
 {
@@ -31,7 +31,7 @@ class Config
      */
     public function getDays()
     {
-        return $this->_scopeConfig->getValue("ayko/cron/delete_older_than", ScopeInterface::SCOPE_STORE);
+        return $this->_scopeConfig->getValue("kotsios/cron/delete_older_than", ScopeInterface::SCOPE_STORE);
     }
 
     /**
@@ -39,6 +39,6 @@ class Config
      */
     public function getCronTime()
     {
-        return $this->_scopeConfig->getValue('ayko/cron/delete_older_than', ScopeInterface::SCOPE_STORE);
+        return $this->_scopeConfig->getValue('kotsios/cron/delete_older_than', ScopeInterface::SCOPE_STORE);
     }
 }

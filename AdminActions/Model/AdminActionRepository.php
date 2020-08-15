@@ -1,11 +1,11 @@
 <?php
 
-namespace Ayko\AdminActions\Model;
+namespace Kotsios\AdminActions\Model;
 
-use Ayko\AdminActions\Api\AdminActionRepositoryInterface;
-use Ayko\AdminActions\Api\Data\AdminActionInterface;
-use Ayko\AdminActions\Model\ResourceModel\AdminAction as AdminActionResource;
-use Ayko\AdminActions\Model\ResourceModel\AdminAction\Grid\CollectionFactory;
+use Kotsios\AdminActions\Api\AdminActionRepositoryInterface;
+use Kotsios\AdminActions\Api\Data\AdminActionInterface;
+use Kotsios\AdminActions\Model\ResourceModel\AdminAction as AdminActionResource;
+use Kotsios\AdminActions\Model\ResourceModel\AdminAction\Grid\CollectionFactory;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\SearchResultsInterfaceFactory;
 use Magento\Framework\Api\SortOrder;
@@ -15,7 +15,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
  * Class AdminActionRepository
- * @package Ayko\AdminActions\Model
+ * @package Kotsios\AdminActions\Model
  */
 class AdminActionRepository implements AdminActionRepositoryInterface
 {

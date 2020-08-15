@@ -1,17 +1,17 @@
 <?php
 
-namespace Ayko\AdminActions\Cron;
+namespace Kotsios\AdminActions\Cron;
 
-use Ayko\AdminActions\Api\AdminActionRepositoryInterface;
-use Ayko\AdminActions\Api\Data\AdminActionInterface;
-use Ayko\AdminActions\Api\Data\AdminActionSearchResultInterface;
-use Ayko\AdminActions\Helper\Config;
+use Kotsios\AdminActions\Api\AdminActionRepositoryInterface;
+use Kotsios\AdminActions\Api\Data\AdminActionInterface;
+use Kotsios\AdminActions\Api\Data\AdminActionSearchResultInterface;
+use Kotsios\AdminActions\Helper\Config;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Psr\Log\LoggerInterface;
 
 /**
  * Class Delete
- * @package Ayko\AdminActions\Cron
+ * @package Kotsios\AdminActions\Cron
  */
 class Delete {
 

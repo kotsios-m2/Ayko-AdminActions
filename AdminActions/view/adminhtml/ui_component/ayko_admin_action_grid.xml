@@ -2,15 +2,15 @@
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">ayko_admin_action_grid.ayko_adminaction_data_source</item>
-            <item name="deps" xsi:type="string">ayko_admin_action_grid.ayko_adminaction_data_source</item>
+            <item name="provider" xsi:type="string">kotsios_admin_action_grid.kotsios_adminaction_data_source</item>
+            <item name="deps" xsi:type="string">kotsios_admin_action_grid.kotsios_adminaction_data_source</item>
         </item>
         <item name="spinner" xsi:type="string">spinner_columns</item>
     </argument>
-    <dataSource name="ayko_adminaction_data_source">
+    <dataSource name="kotsios_adminaction_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Ayko\AdminActions\Ui\Component\DataProvider\AdminAction\DataProvider</argument>
-            <argument name="name" xsi:type="string">ayko_adminaction_data_source</argument>
+            <argument name="class" xsi:type="string">Kotsios\AdminActions\Ui\Component\DataProvider\AdminAction\DataProvider</argument>
+            <argument name="name" xsi:type="string">kotsios_adminaction_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
